@@ -17,6 +17,7 @@ trj=importdata([filename]);
 if isstruct(trj)
     trj = trj.R;
 end
+trj = double(trj); % Make sure that the input data is a double instead of uint8 %
 
 time=str2double(get(findobj(MLEshort.time),'String'));
 cola=str2double(get(findobj(MLEshort.size),'String'));
